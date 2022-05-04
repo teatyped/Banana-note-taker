@@ -26,7 +26,7 @@ class Notes {
 
       //try and catch is similar to if and else
       try {
-          //allNotes is combined with the parsed 'notes'
+          //allNotes is combined with the parsed 'notes'// string to object
         allNotes = [].concat(JSON.parse(notes));
       } catch (err) {
           //if no 'notes', then return empty array

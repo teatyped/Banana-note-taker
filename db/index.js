@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const util = require("util");
+const generateUniqueId = require('generate-unique-id');
 
 //util.promisify - takes a function callback and returns a version that returns promises
 //util.promisify a read and write file
@@ -40,9 +41,12 @@ class Notes {
       //deconstruct title/text; use this for the delete bonus section
     const { title, text } = note;
 
+    const newId = generateUniqueId();
+
     const newNote = {
       title,
       text,
+      id: newId
     };
 
     return this.readNotes()
@@ -50,6 +54,21 @@ class Notes {
       .then((notes) => [...notes, newNote])
       .then((newNotesArray) => this.write(newNotesArray));
   }
+
+  removeNote(noteId) {
+    // the delete bonus section
+  
+
+  return this.readNotes()
+      // filter notes to return only 
+    .then((notes) => notes.filter( note => note.id !== noteId))
+    .then((newNotesArray) => this.write(newNotesArray));
+}
+
+
+
+
+
 }
 
 module.exports = new Notes();

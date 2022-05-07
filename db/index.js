@@ -58,7 +58,6 @@ class Notes {
   removeNote(noteId) {
     // the delete bonus section
   
-
   return this.readNotes()
       // filter notes to return only 
     .then((notes) => notes.filter( note => note.id !== noteId))

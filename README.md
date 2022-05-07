@@ -37,9 +37,13 @@ Note taker is a font end application that can be used to write notes , save note
 ## How to install 
 - run "npm install" in terminal to download the dependencies in order to run application
 
-## How to test
+## How to test locally
 - run "npm start" ( to start the server )
 - navigate to 'http://localhost:3001/notes'
 - take some notes and click the save button
 - refresh the app to check for reload of notes
 - delete note if needed
+
+## How to test via heroku
+- navigate to link
+- https://banana-note.herokuapp.com/notes
